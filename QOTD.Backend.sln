@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QOTD.Backend", "QOTD.Backend\QOTD.Backend.csproj", "{E3D61A4F-2753-444F-A82E-5F1D35924CEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3D61A4F-2753-444F-A82E-5F1D35924CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D61A4F-2753-444F-A82E-5F1D35924CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D61A4F-2753-444F-A82E-5F1D35924CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D61A4F-2753-444F-A82E-5F1D35924CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53C4BB89-A1A9-484F-871B-3611E4C5FC78}
+	EndGlobalSection
+EndGlobal
