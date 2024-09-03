@@ -43,7 +43,7 @@ namespace QOTD.Backend.Controllers.Api
                 return NotFound();
             }
 
-            var userResponse = await _context.UserResponse
+            var userResponse = await _context.UserResponses
                 .FirstOrDefaultAsync(ur => ur.UserId == userId && ur.QuestionId == dailyQuestion.Question.QuestionId);
 
             if (userResponse != null)

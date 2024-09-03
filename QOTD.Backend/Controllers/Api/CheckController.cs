@@ -24,7 +24,7 @@ namespace QOTD.Backend.Controllers.Api
         public async Task<ActionResult> GetIsCorrect(int userid ,int qid)
         {
             // Fetch the IsCorrect value based on the QuestionId (qid)
-            var isCorrect = await _context.UserResponse
+            var isCorrect = await _context.UserResponses
                 .Where(ur => ur.QuestionId == qid && ur.UserId == userid)
                 .Select(ur => ur.IsCorrect)
                 .FirstOrDefaultAsync();

@@ -32,7 +32,7 @@ namespace QOTD.Backend.Controllers.Api
                 return NotFound(); // Returns a 404 if the user is not found
             }
 
-            var reputationName = await _context.ReputationMaster
+            var reputationName = await _context.ReputationMasters
                 .Where(r => user.Points >= r.MinPoints && user.Points <= r.UptoPoints)
                 .Select(r => r.Badge)
                 .FirstOrDefaultAsync();

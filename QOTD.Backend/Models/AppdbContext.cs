@@ -14,8 +14,8 @@ namespace QOTD.Backend.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<AnswerOption> AnswerOptions { get; set; }
         public DbSet<AnswerKey> AnswerKeys { get; set; }
-        public DbSet<ReputationMaster> ReputationMaster { get; set; }
-        public DbSet<UserResponse> UserResponse { get; set; }
+        public DbSet<ReputationMaster> ReputationMasters { get; set; }
+        public DbSet<UserResponse> UserResponses { get; set; }
 
 
 

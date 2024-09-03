@@ -35,8 +35,8 @@ namespace QOTD.Backend.Controllers.Api
             {
                 return NotFound(); // Return 404 if the question doesn't exist
             }
-            var userResponses = await _context.UserResponse.Where(ur => ur.QuestionId == id).ToListAsync();
-            _context.UserResponse.RemoveRange(userResponses);
+            var userResponses = await _context.UserResponses.Where(ur => ur.QuestionId == id).ToListAsync();
+            _context.UserResponses.RemoveRange(userResponses);
 
             // Remove the question from the database
             _context.Questions.Remove(question);

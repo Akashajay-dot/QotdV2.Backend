@@ -25,7 +25,7 @@ namespace QOTD.Backend.Controllers.Api
        
         public async Task<ActionResult> GetQuestioncount(int userId)
         {
-            var answeredQuestionIds = await _context.UserResponse
+            var answeredQuestionIds = await _context.UserResponses
               .Where(ur => ur.UserId == userId)
               .Select(ur => ur.QuestionId)
               .ToListAsync();

@@ -47,7 +47,7 @@ namespace QOTD.Backend.Controllers.Api
                     IsCorrect = responseDto.IsCorrect,
                 };
 
-                _context.UserResponse.Add(userResponse);
+                _context.UserResponses.Add(userResponse);
             }
 
             await _context.SaveChangesAsync();
