@@ -4651,23 +4651,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\akashtc\\.nuget\\packages\\": {},
+    "C:\\Users\\ajoseph\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\akashtc\\source\\repos\\QOTD.Backend\\QOTD.Backend\\QOTD.Backend.csproj",
+      "projectUniqueName": "D:\\DataConversion\\Datamigration\\Tools\\POC\\Akash_Git\\QotdV2.Backend\\QOTD.Backend\\QOTD.Backend.csproj",
       "projectName": "QOTD.Backend",
-      "projectPath": "C:\\Users\\akashtc\\source\\repos\\QOTD.Backend\\QOTD.Backend\\QOTD.Backend.csproj",
-      "packagesPath": "C:\\Users\\akashtc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\akashtc\\source\\repos\\QOTD.Backend\\QOTD.Backend\\obj\\",
+      "projectPath": "D:\\DataConversion\\Datamigration\\Tools\\POC\\Akash_Git\\QotdV2.Backend\\QOTD.Backend\\QOTD.Backend.csproj",
+      "packagesPath": "C:\\Users\\ajoseph\\.nuget\\packages\\",
+      "outputPath": "D:\\DataConversion\\Datamigration\\Tools\\POC\\Akash_Git\\QotdV2.Backend\\QOTD.Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\akashtc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ajoseph\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4677,7 +4677,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nexus.infra.aws.carestack.com/repository/Carestack.nuget/": {}
       },
       "frameworks": {
         "net8.0": {
@@ -4750,7 +4751,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
