@@ -19,23 +19,17 @@ namespace QOTD.Backend.Controllers.Api
             _context = context;
         }
 
-        // GET: api/users/orderedbyPoints
         [HttpGet("orderedbyPoints")]
         public async Task<IActionResult> GetUsersOrderedByPoints()
         {
-            //var userIds = await _context.Users
-            //  .OrderByDescending(u => u.Points) // Order users by points in descending order
-            // .Select(u => u.UserId)  // Select only the user IDs
-            // .ToListAsync();
-
-            //return Ok(userIds); // Return the list of user IDs
+           
             var users = await _context.Users
-              .OrderByDescending(u => u.Points) // Order users by points in descending order
+              .OrderByDescending(u => u.Points) 
               .Select(u => new
               {
                   u.UserId,
                   u.Name
-              })  // Select both UserId and Name
+              })  
               .ToListAsync();
 
             return Ok(users);

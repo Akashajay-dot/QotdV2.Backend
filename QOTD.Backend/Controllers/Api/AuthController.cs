@@ -62,16 +62,12 @@ namespace QOTD.Backend.Controllers.Api
                    
                    
                 }
-               // var userRank = _context.Users
-               //    .Where(u => u.Points > _context.Users
-               //    .Where(us => us.UserId == user.UserId).Select(us => us.Points).FirstOrDefault())
-               //    .Count() + 1;
-               // var totalUsers = _context.Users.Count();
+              
 
 
                 var orderedUsers = await _context.Users
                     .OrderByDescending(u => u.Points)
-                    .ThenBy(u => u.UserId) // Ensure consistent ordering for users with the same points
+                    .ThenBy(u => u.UserId) 
                     .ToListAsync();
 
                 var userRank = orderedUsers

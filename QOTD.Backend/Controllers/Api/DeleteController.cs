@@ -29,22 +29,19 @@ namespace QOTD.Backend.Controllers.Api
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteQuestion(int id)
         {
-            // Find the question by its ID
             var question = await _context.Questions.SingleOrDefaultAsync(q => q.QuestionId == id);
             if (question == null)
             {
-                return NotFound(); // Return 404 if the question doesn't exist
+                return NotFound(); 
             }
             var userResponses = await _context.UserResponses.Where(ur => ur.QuestionId == id).ToListAsync();
             _context.UserResponses.RemoveRange(userResponses);
 
-            // Remove the question from the database
             _context.Questions.Remove(question);
             await _context.SaveChangesAsync();
 
             return NoContent();
 
-            // Return 204 No Content after successful deletion
         }
     }
 }

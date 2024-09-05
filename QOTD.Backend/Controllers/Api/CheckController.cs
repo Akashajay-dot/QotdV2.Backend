@@ -19,11 +19,9 @@ namespace QOTD.Backend.Controllers.Api
             _context = context;
         }
 
-        // GET: api/Questions/IsCorrect/{qid}
         [HttpGet("Questions/IsCorrect/{userid}/{qid}")]
         public async Task<ActionResult> GetIsCorrect(int userid ,int qid)
         {
-            // Fetch the IsCorrect value based on the QuestionId (qid)
             var isCorrect = await _context.UserResponses
                 .Where(ur => ur.QuestionId == qid && ur.UserId == userid)
                 .Select(ur => ur.IsCorrect)
@@ -31,7 +29,6 @@ namespace QOTD.Backend.Controllers.Api
 
            
 
-            // Return the IsCorrect value
             return Ok(new { IsCorrect = isCorrect });
         }
     }

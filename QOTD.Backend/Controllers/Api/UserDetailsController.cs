@@ -19,17 +19,15 @@ namespace QOTD.Backend.Controllers.Api
             _context = context;
         }
 
-        // GET: api/user/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserByGoogleId(int id)
         {
-            // Fetch the user from the database using the Google User ID
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.UserId == id);
 
             if (user == null)
             {
-                return NotFound(); // Returns a 404 if the user is not found
+                return NotFound(); 
             }
 
             var reputationName = await _context.ReputationMasters
@@ -39,8 +37,8 @@ namespace QOTD.Backend.Controllers.Api
 
             return Ok(new
             {
-                User = user, // Include all user fields
-                ReputationName = reputationName // Include reputation name in the response
+                User = user,
+                ReputationName = reputationName
             });
         }
     }

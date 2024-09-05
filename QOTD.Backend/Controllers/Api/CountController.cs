@@ -30,13 +30,9 @@ namespace QOTD.Backend.Controllers.Api
               .Select(ur => ur.QuestionId)
               .ToListAsync();
 
-            // var unansweredQuestions = _context.Questions
-            //   .Where(q => !answeredQuestionIds.Contains(q.QuestionId) && q.IsActive == true && q.IsApproved == true)
-            //   .ToList();
+            
             var today = DateTime.Today;
-            var startOfToday = today; // Start of today, i.e., 00:00:00
-
-            // Select questions with dates up to and including today
+            var startOfToday = today; 
             var ApprovedQuestionIds = await _context.Questions
                 .Where(q => EF.Functions.DateDiffDay(q.QuestionDate, startOfToday) >= 0)
                 .Select(q => q.QuestionId)

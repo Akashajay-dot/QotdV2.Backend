@@ -27,10 +27,9 @@ namespace QOTD.Backend.Controllers.Api
 
             if (question == null)
             {
-                return NotFound(); // Return 404 if the question is not found
+                return NotFound();
             }
 
-            // Update the date
             if (request.Date == null)
             {
                 question.QuestionDate = null;
@@ -42,9 +41,9 @@ namespace QOTD.Backend.Controllers.Api
                 question.IsApproved = true;
             }
 
-            await _context.SaveChangesAsync(); // Save changes to the database
+            await _context.SaveChangesAsync(); 
 
-            return Ok(question); // Return the updated question
+            return Ok(question); 
         }
     }
 

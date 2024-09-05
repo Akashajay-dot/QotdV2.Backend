@@ -30,7 +30,6 @@ namespace QOTD.Backend.Controllers.Api
 
             var today = DateTime.Today;
 
-            // Select questions with dates up to and including today
             var activeApprovedQuestionIds = await _context.Questions
                 .Where(q => EF.Functions.DateDiffDay(q.QuestionDate, today) >= 0)
                 .Select(q => q.QuestionId)
