@@ -7,6 +7,8 @@ using System.Web;
 
 namespace QOTD.Backend.Models
 {
+    [Table("UserResponse")]
+
     public class UserResponse
     {
         [Key]

@@ -7,13 +7,13 @@ using System.Web;
 
 namespace QOTD.Backend.Models
 {
+    [Table("ReputationMaster")]
+
     public class ReputationMaster
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ReputationMasterId { get; set; }
         public int MinPoints { get; set; }
-
-
 
         public int UptoPoints { get; set;}
 

@@ -7,6 +7,7 @@ using System.Web;
 
 namespace QOTD.Backend.Models
 {
+    [Table("AnswerKey")]
     public class AnswerKey
     {
         [Key]
